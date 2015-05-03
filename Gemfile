@@ -44,5 +44,5 @@ group :development, :test do
   gem 'spring'
 
   # Use rspec instead of test unit
-  gem 'rspec-rails', '~> 3.0.0'
+  gem 'rspec-rails', '~> 3.1'
 end
