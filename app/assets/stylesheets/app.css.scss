@@ -8,8 +8,11 @@ body {
   color: White;
   padding: 1em;
   .logo{
+    background-image: url(image-path('logo.png'));
+    background-size: cover;
     display: block;
     width: 3em;
+    height: 3em;
     margin: 0 auto;
   }
 }
