@@ -11,13 +11,14 @@ body {
     background-image: url(image-path('logo.png'));
     background-size: cover;
     display: block;
-    width: 3em;
-    height: 3em;
+    width: 12em;
+    height: 12em;
     margin: 0 auto;
   }
 }
 .main {
   padding: 1em;
+  font-size: 4em;
 }
 .footer {
   background: Black;
@@ -28,11 +29,28 @@ body {
   height: 100%;
   width: 100%;
   position: fixed;
+  font-size: 2em;
   a {
     color: White;
     text-decoration: none;
     &:visited {
       color: White;
     }
+  }
+}
+
+// Desktop
+@media screen and (min-width: 64em) {
+  .header {
+    .logo {
+      width: 6em;
+      height: 6em;
+    }
+  }
+  .main {
+    font-size: 2em;
+  }
+  .footer {
+    font-size: 1em;
   }
 }
