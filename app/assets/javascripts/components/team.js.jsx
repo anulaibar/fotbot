@@ -1,15 +1,34 @@
 var Team = React.createClass({
-  propTypes: {
-    name: React.PropTypes.string,
-    color: React.PropTypes.string
+  getInitialState: function() {
+    return {
+      teams: []
+    };
   },
-
+  componentDidMount: function() {
+    $.get('teams', function(teams) {
+      if (this.isMounted()) {
+        this.setState({
+          teams: teams
+        });
+      }
+    }.bind(this));
+  },
   render: function() {
     return (
-      <div className="hot-pink">
-        <div>Name: {this.props.name}</div>
-        <div>Color: {this.props.color}</div>
-      </div>
+      <ul className="hot-pink">
+        {this.state.teams.map(function(team) {
+          return(
+            <div>
+              <p>
+                <b>Name:</b> <i>{team.name}</i>
+              </p>
+              <p>
+                <b>Color:</b> <i>{team.color}</i>
+              </p>
+            </div>
+            );
+        })}
+      </ul>
     );
   }
 });
