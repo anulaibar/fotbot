@@ -46,3 +46,6 @@ group :development, :test do
   # Use rspec instead of test unit
   gem 'rspec-rails', '~> 3.1'
 end
+
+# Needed for assets on Heroku
+gem 'rails_12factor', group: :production
