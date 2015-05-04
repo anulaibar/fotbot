@@ -7,10 +7,15 @@ var App = React.createClass({
     return (
       <div>
         <div className="header">
-          <Link to="/">Home</Link>
+          <Link to="/">
+            <img className="logo" src="assets/logo.png" />
+          </Link>
         </div>
         <div className="main">
           <RouteHandler/>
+        </div>
+        <div className="footer">
+          Robots lovingly delivered by <a href="http://robohash.org">Robohash.org</a>
         </div>
       </div>
     );
