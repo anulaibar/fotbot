@@ -1,0 +1,19 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+.header {
+  background: Black;
+  color: White;
+  padding: 1em;
+  a {
+    color: White;
+    text-decoration: none;
+    &:visited {
+      color: White;
+    }
+  }
+}
+.main {
+  padding: 1em;
+}

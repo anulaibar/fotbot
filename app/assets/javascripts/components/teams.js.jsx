@@ -1,4 +1,4 @@
-var Team = React.createClass({
+var Teams = React.createClass({
   getInitialState: function() {
     return {
       teams: []
@@ -18,7 +18,7 @@ var Team = React.createClass({
       <ul className="hot-pink">
         {this.state.teams.map(function(team) {
           return(
-            <div>
+            <div key={team.id}>
               <p>
                 <b>Name:</b> <i>{team.name}</i>
               </p>
