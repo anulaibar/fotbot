@@ -6,6 +6,7 @@ var Home = React.createClass({
     return (
       <div>
         <Link to="teams">Teams</Link>
+        <Link to="players">Players</Link>
       </div>
     );
   }
