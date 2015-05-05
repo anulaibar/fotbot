@@ -17,8 +17,31 @@ body {
   }
 }
 .main {
-  padding: 1em;
   font-size: 4em;
+}
+a {
+  color: White;
+  text-decoration: none;
+  &:visited {
+    color: White;
+  }
+}
+.g-1-2 {
+  width: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+}
+.teams-button {
+  padding: 1em;
+  text-align: center;
+  background-color: HotPink;
+  color: White;
+}
+.players-button {
+  padding: 1em;
+  text-align: center;
+  background-color: Purple;
+  color: White;
 }
 .footer {
   background: Black;
@@ -30,13 +53,6 @@ body {
   width: 100%;
   position: fixed;
   font-size: 2em;
-  a {
-    color: White;
-    text-decoration: none;
-    &:visited {
-      color: White;
-    }
-  }
 }
 
 // Desktop
