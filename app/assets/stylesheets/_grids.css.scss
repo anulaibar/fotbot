@@ -1,5 +1,4 @@
 .g {
-  padding: 1em;
   text-align: center;
   display: inline-block;
   box-sizing: border-box;
@@ -12,4 +11,20 @@
 .g-1-2 {
   @extend .g;
   width: 50%;
+}
+.g-1-3 {
+  @extend .g;
+  width: 33.33333%;
+}
+.g-2-3 {
+  @extend .g;
+  width: 66.66666%;
+}
+.g-1-4 {
+  @extend .g;
+  width: 25%;
+}
+.g-3-4 {
+  @extend .g;
+  width: 75%;
 }
