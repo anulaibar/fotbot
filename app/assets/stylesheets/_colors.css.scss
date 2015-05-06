@@ -1,0 +1,33 @@
+// Background colors and text colors
+.black {
+  background-color: Black;
+  color: White;
+}
+.pink {
+  background-color: HotPink;
+  color: White;
+}
+.purple {
+  background-color: Purple;
+  color: White;
+}
+.white {
+  background-color: White;
+  color: Black;
+  a {
+    color: Black;
+    &:visited {
+      color: Black;
+    }
+  }
+}
+.green {
+  background-color: Green;
+  color: White;
+}
+a {
+  color: White;
+  &:visited {
+    color: White;
+  }
+}

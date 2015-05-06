@@ -1,12 +1,16 @@
+@import 'colors';
+@import 'grids';
+
+$breakpoint: 64em;
+
 body {
   margin: 0;
   padding: 0;
   font-family: "Chelsea Market", sans-serif;
 }
 .header {
-  background: Black;
-  color: White;
-  padding: 1em;
+  @extend .g-1;
+  @extend .black;
   .logo{
     background-image: url(image-path('logo.png'));
     background-size: cover;
@@ -14,59 +18,29 @@ body {
     width: 12em;
     height: 12em;
     margin: 0 auto;
-  }
-}
-.main {
-  font-size: 4em;
-}
-a {
-  color: White;
-  text-decoration: none;
-  &:visited {
-    color: White;
-  }
-}
-.g-1-2 {
-  width: 50%;
-  display: inline-block;
-  box-sizing: border-box;
-}
-.teams-button {
-  padding: 1em;
-  text-align: center;
-  background-color: HotPink;
-  color: White;
-}
-.players-button {
-  padding: 1em;
-  text-align: center;
-  background-color: Purple;
-  color: White;
-}
-.footer {
-  background: Black;
-  color: White;
-  font-style: italic;
-  text-align: center;
-  padding: 1em;
-  height: 100%;
-  width: 100%;
-  position: fixed;
-  font-size: 2em;
-}
-
-// Desktop
-@media screen and (min-width: 64em) {
-  .header {
-    .logo {
+    @media screen and (min-width: $breakpoint) {
       width: 6em;
       height: 6em;
     }
   }
-  .main {
+}
+.main {
+  font-size: 4em;
+  @media screen and (min-width: $breakpoint) {
     font-size: 2em;
   }
-  .footer {
+}
+a {
+  text-decoration: none;
+}
+.footer {
+  @extend .g-1;
+  @extend .black;
+  font-style: italic;
+  height: 100%;
+  position: fixed;
+  font-size: 2em;
+  @media screen and (min-width: $breakpoint) {
     font-size: 1em;
   }
 }

@@ -1,0 +1,15 @@
+.g {
+  padding: 1em;
+  text-align: center;
+  display: inline-block;
+  box-sizing: border-box;
+}
+.g-1 {
+  @extend .g;
+  display: block;
+  width: 100%;
+}
+.g-1-2 {
+  @extend .g;
+  width: 50%;
+}
