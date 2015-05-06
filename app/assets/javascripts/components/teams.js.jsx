@@ -1,3 +1,6 @@
+var Router = ReactRouter;
+var Link = Router.Link;
+
 var Teams = React.createClass({
   getInitialState: function() {
     return {
@@ -15,20 +18,17 @@ var Teams = React.createClass({
   },
   render: function() {
     return (
-      <ul className="hot-pink">
+      <div>
+        <div className="g-3-4" />
+        <Link to="newTeam" className="g-1-4 red">New</Link>
         {this.state.teams.map(function(team) {
           return(
-            <div key={team.id}>
-              <p>
-                <b>Name:</b> <i>{team.name}</i>
-              </p>
-              <p>
-                <b>Color:</b> <i>{team.color}</i>
-              </p>
+            <div key={team.id} className={"g-1 " + team.color}>
+              {team.name}
             </div>
             );
         })}
-      </ul>
+      </div>
     );
   }
 });

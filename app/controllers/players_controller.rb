@@ -20,7 +20,7 @@ class PlayersController < ApplicationController
       player.save
       render json: {}
     else
-      render json: {}, status: 400
+      render json: {errors: player.errors.full_messages}, status: 400
     end
   end
 

@@ -1,3 +1,6 @@
+var Router = ReactRouter;
+var Link = Router.Link;
+
 var Players = React.createClass({
   getInitialState: function() {
     return {
@@ -15,17 +18,17 @@ var Players = React.createClass({
   },
   render: function() {
     return (
-      <ul className="hot-pink">
+      <div>
+        <div className="g-3-4" />
+        <Link to="newPlayer" className="g-1-4 red">New</Link>
         {this.state.players.map(function(player) {
           return(
-            <div key={player.id}>
-              <p>
-                <b>Name:</b> <i>{player.name}</i>
-              </p>
+            <div key={player.id} className="g-1 pink">
+              {player.name}
             </div>
             );
         })}
-      </ul>
+      </div>
     );
   }
 });

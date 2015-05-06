@@ -4,8 +4,10 @@ var DefaultRoute = Router.DefaultRoute;
 
 var routes = (
   <Route name="app" path="/" handler={App}>
-    <Route name="teams" path="teams" handler={Teams} />
-    <Route name="players" path="players" handler={Players} />
+    <Route name="teams" path="teams" handler={Teams}/>
+    <Route name="newTeam" path="teams/new" handler={NewTeam}/>
+    <Route name="players" path="players" handler={Players}/>
+    <Route name="newPlayer" path="players/new" handler={NewPlayer}/>
     <DefaultRoute handler={Home}/>
   </Route>
 );

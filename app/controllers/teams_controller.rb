@@ -20,7 +20,7 @@ class TeamsController < ApplicationController
       team.save
       render json: {}
     else
-      render json: {}, status: 400
+      render json: {errors: team.errors.full_messages}, status: 400
     end
   end
 
