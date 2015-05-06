@@ -2,7 +2,8 @@ class TeamsController < ApplicationController
 
   def index
     teams = Team.all
-    render json: teams
+    sorted = teams.sort{ |t1,t2| t2.updated_at <=> t1.updated_at }
+    render json: sorted
   end
 
   def show

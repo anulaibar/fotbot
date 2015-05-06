@@ -1,13 +1,25 @@
+# encoding: UTF-8
 require 'rails_helper'
 
 RSpec.describe PlayersController, type: :controller do
 
   describe 'GET /index' do
-    let(:players) { [ Player.new(id: 1, name: 'C3PO', avatar: 'http://ro.bot/c3po', team_id: 1) ] }
-    it 'returns all players' do
-      allow(Player).to receive(:all).and_return(players)
+    let(:players) { [
+      Player.new(id: 1, name: 'Özz', avatar: 'http://ro.bot', team_id: 1),
+      Player.new(id: 1, name: 'R2D2', avatar: 'http://ro.bot', team_id: 1)
+    ] }
+    before do
+      expect(Player).to receive(:all).and_return(players)
       get :index
-      expect(response.body).to eq(players.to_json)
+    end
+    it 'returns all players' do
+      json = JSON.parse(response.body)
+      expect(json.count).to eq(players.count)
+    end
+    it 'orders by name' do
+      json = JSON.parse(response.body)
+      expect(json.first['name']).to eq('R2D2')
+      expect(json.last['name']).to eq('Özz')
     end
   end
   describe 'GET /1' do

@@ -2,7 +2,8 @@ class PlayersController < ApplicationController
 
   def index
     players = Player.all
-    render json: players
+    sorted = players.sort_by{ |player| player.name}
+    render json: sorted
   end
 
   def show

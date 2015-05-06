@@ -3,11 +3,22 @@ require 'rails_helper'
 RSpec.describe TeamsController, type: :controller do
 
   describe 'GET /index' do
-    let(:teams) { [ Team.new(id: 1, name: 'C3PO', color: 'Gold') ] }
-    it 'returns all teams' do
-      allow(Team).to receive(:all).and_return(teams)
+    let(:teams) { [
+      Team.new(id: 1, name: 'Zero', color: 'Gold', updated_at: "2015-05-06 20:14:00"),
+      Team.new(id: 1, name: 'One', color: 'Gold', updated_at: "2015-05-06 20:14:01")
+    ] }
+    before do
+      expect(Team).to receive(:all).and_return(teams)
       get :index
-      expect(response.body).to eq(teams.to_json)
+    end
+    xit 'returns all teams' do
+      json = JSON.parse(response.body)
+      expect(json.count).to eq(teams.count)
+    end
+    it 'orders by last updated' do
+      json = JSON.parse(response.body)
+      expect(json.first['name']).to eq('One')
+      expect(json.last['name']).to eq('Zero')
     end
   end
   describe 'GET /1' do
