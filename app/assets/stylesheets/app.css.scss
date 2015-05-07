@@ -44,6 +44,10 @@ input, button {
   outline: none;
   font-family: Kalam;
 }
+.avatar {
+  @extend .g-1;
+  font-size: 0;
+}
 .footer {
   @extend .g-1;
   @extend .black;

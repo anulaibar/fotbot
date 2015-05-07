@@ -8,6 +8,7 @@ var routes = (
     <Route name="newTeam" path="teams/new" handler={NewTeam}/>
     <Route name="players" path="players" handler={Players}/>
     <Route name="newPlayer" path="players/new" handler={NewPlayer}/>
+    <Route name="showPlayer" path="players/:id" handler={ShowPlayer}/>
     <DefaultRoute handler={Home}/>
   </Route>
 );
