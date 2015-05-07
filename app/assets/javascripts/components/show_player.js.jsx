@@ -28,7 +28,7 @@ var ShowPlayer = React.createClass({
         <div className="avatar">
           <img src={this.state.player.avatar}/>
         </div>
-        <div className="g-1 brown">
+        <div className="g-1 purple">
           {this.state.player.name}
         </div>
       </div>
