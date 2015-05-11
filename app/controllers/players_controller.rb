@@ -17,6 +17,8 @@ class PlayersController < ApplicationController
 
   def create
     player = Player.new(player_params)
+    robohash = Robohash.new
+    player.avatar = robohash.fetch(player.name)
     if(player.valid?)
       player.save
       render json: {}

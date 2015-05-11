@@ -43,12 +43,14 @@ RSpec.describe PlayersController, type: :controller do
     end
   end
   describe 'POST /create' do
+    let(:robohash) {double}
+    before { expect(Robohash).to receive(:new) { robohash } }
     context 'with valid params' do
-      let(:player) { double() }
       let(:params) { {player: {name: 'R2D2'}} }
       it 'returns ok' do
+        player = Player.new(name: 'R2D2')
         expect(Player).to receive(:new) { player }
-        expect(player).to receive(:valid?) { true }
+        expect(robohash).to receive(:fetch).with('R2D2').and_return('http://ro.bot/r2d2')
         expect(player).to receive(:save)
         post :create, params
         expect(response.status).to eq(200)
@@ -57,6 +59,7 @@ RSpec.describe PlayersController, type: :controller do
     context 'with invalid params' do
       let(:params) { {player: {name: nil}} }
       it 'returns bad request' do
+        expect(robohash).to receive(:fetch)
         post :create, params
         expect(response.status).to eq(400)
       end

@@ -15,6 +15,10 @@
     pg_ctl -D /usr/local/var/postgres start
     createuser -s -r fotbot
 
+## Environment variables
+
+    export ROBOHASH_API_KEY=<your_api_key>
+
 ## Running specs
 
     bundle exec rspec
