@@ -7,7 +7,7 @@ var App = React.createClass({
     return (
       <div>
         <div className="header">
-          <Link className="logo" to="app">
+          <Link className="logo" to="home">
           </Link>
         </div>
         <div className="main">

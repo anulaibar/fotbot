@@ -9,10 +9,10 @@ var routes = (
     <Route name="players" path="players" handler={Players}/>
     <Route name="newPlayer" path="players/new" handler={NewPlayer}/>
     <Route name="showPlayer" path="players/:id" handler={ShowPlayer}/>
-    <DefaultRoute handler={Home}/>
+    <DefaultRoute name="home" handler={Home}/>
   </Route>
 );
 
 Router.run(routes, function (Handler) {
-  React.render(<Handler/>, document.body);
+  React.render(<Handler/>, document.getElementById('app'));
 });
