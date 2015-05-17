@@ -54,15 +54,15 @@ input, button {
   outline: none;
   font-family: Kalam;
 }
-.form {
-  @include transition(height);
-  height: 1.4em;
-  overflow: hidden;
-}
 .avatar {
   @extend .g-1;
   font-size: 0;
   height: 300px;
+}
+.create-player {
+  @include transition(height);
+  height: 1.4em;
+  overflow: hidden;
 }
 .hide {
   height: 0px;
