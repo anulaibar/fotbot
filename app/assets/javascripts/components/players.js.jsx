@@ -21,13 +21,15 @@ var Players = React.createClass({
       <div>
         <div className="g-3-4" />
         <Link to="newPlayer" className="g-1-4 red">New</Link>
-        {this.state.players.map(function(player) {
-          return(
-            <Link to="showPlayer" params={player} key={player.id} className="g-1 purple">
-              {player.name}
-            </Link>
-            );
-        })}
+        <div className="purple">
+          {this.state.players.map(function(player) {
+            return(
+              <Link to="showPlayer" params={player} key={player.id} className="g-1">
+                {player.name}
+              </Link>
+              );
+          })}
+        </div>
       </div>
     );
   }
