@@ -21,7 +21,7 @@ class PlayersController < ApplicationController
     player.avatar = robohash.fetch(player.name)
     if(player.valid?)
       player.save
-      render json: {}
+      render json: player
     else
       render json: {errors: player.errors.full_messages}, status: 400
     end

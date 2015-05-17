@@ -54,6 +54,7 @@ RSpec.describe PlayersController, type: :controller do
         expect(player).to receive(:save)
         post :create, params
         expect(response.status).to eq(200)
+        expect(response.body).to eq(player.to_json)
       end
     end
     context 'with invalid params' do

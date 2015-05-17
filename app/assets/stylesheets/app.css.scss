@@ -51,6 +51,9 @@ input, button {
   font-size: 0;
   height: 300px;
 }
+.hide {
+  display: none;
+}
 .footer {
   @extend .g-1;
   padding: 1em 0;

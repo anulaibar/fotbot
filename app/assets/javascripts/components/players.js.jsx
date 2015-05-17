@@ -7,6 +7,11 @@ var Players = React.createClass({
       players: []
     };
   },
+  handleCreate: function(player) {
+    var players = this.state.players;
+    players.unshift(player);
+    this.setState({players: players});
+  },
   componentDidMount: function() {
     $.get('players', function(players) {
       if (this.isMounted()) {
@@ -19,12 +24,11 @@ var Players = React.createClass({
   render: function() {
     return (
       <div>
-        <div className="g-3-4" />
-        <Link to="newPlayer" className="g-1-4 red">New</Link>
+        <NewPlayer onCreate={this.handleCreate}/>
         <div className="purple">
           {this.state.players.map(function(player) {
             return(
-              <Link to="showPlayer" params={player} key={player.id} className="g-1">
+              <Link to="showPlayer" params={player} className="g-1">
                 {player.name}
               </Link>
               );
