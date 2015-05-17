@@ -19,8 +19,8 @@ var Teams = React.createClass({
   render: function() {
     return (
       <div>
-        <div className="g-3-4" />
-        <Link to="newTeam" className="g-1-4 red">New</Link>
+        <div className="g-2-3" />
+        <Link to="newTeam" className="g-1-3 orange">New</Link>
         {this.state.teams.map(function(team) {
           return(
             <div key={team.id} className={"g-1 " + team.color}>

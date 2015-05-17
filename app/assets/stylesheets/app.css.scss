@@ -4,6 +4,14 @@
 
 $breakpoint: 64em;
 
+@mixin transition($property) {
+  -webkit-transition: $property 0.4s;
+  -moz-transition: $property 0.4s;
+  -ms-transition: $property 0.4s;
+  -o-transition: $property 0.4s;
+  transition: $property 0.4s;
+}
+
 body {
   @extend .black;
   margin: 0;
@@ -46,13 +54,19 @@ input, button {
   outline: none;
   font-family: Kalam;
 }
+.form {
+  @include transition(height);
+  height: 1.4em;
+  overflow: hidden;
+}
 .avatar {
   @extend .g-1;
   font-size: 0;
   height: 300px;
 }
 .hide {
-  display: none;
+  height: 0px;
+  overflow: hidden;
 }
 .footer {
   @extend .g-1;
