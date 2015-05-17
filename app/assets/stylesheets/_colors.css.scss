@@ -1,7 +1,7 @@
 // Background colors and text colors
 @mixin stripe ($color) {
   a:nth-child(even) {
-    background-color: darken($color, 2%);
+    background-color: darken($color, 5%);
   }
 }
 .black {
@@ -15,6 +15,10 @@
 .purple {
   @include stripe(Purple);
   background-color: Purple;
+  color: White;
+}
+.dark-purple {
+  background-color: darken(Purple, 5%);
   color: White;
 }
 .white {

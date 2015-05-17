@@ -17,7 +17,7 @@ var NewPlayer = React.createClass({
     return (
       <div>
         <div className="g-2-3" />
-        <a href="" onClick={this.handleClick} className="g-1-3 purple">New</a>
+        <a href="" onClick={this.handleClick} className="g-1-3 dark-purple">New</a>
         <div className={classes}>
           <CreatePlayer onCreate={this.handleCreate}/>
         </div>
