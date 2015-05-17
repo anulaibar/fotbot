@@ -31,12 +31,12 @@ var NewPlayer = React.createClass({
     var hideClass = this.state.showForm ? '' : 'hide';
     return (
       <div>
-        <div className="g-3-4" />
-        <a href="" onClick={this.handleClick} className="g-1-4 purple">New</a>
+        <div className="g-2-3" />
+        <a href="" onClick={this.handleClick} className="g-1-3 purple">New</a>
         <div className={hideClass}>
           <form onSubmit={this.handleSubmit}>
-            <input className="g-1-2" ref="name" placeholder="Enter name"/>
-            <button className="g-1-2 green">Create</button>
+            <input className="g-2-3" ref="name" placeholder="Enter name"/>
+            <button className="g-1-3 green">Create</button>
           </form>
         </div>
       </div>
