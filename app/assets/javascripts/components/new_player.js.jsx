@@ -16,7 +16,7 @@ var NewPlayer = React.createClass({
     var classes = this.state.showForm ? 'create-player' : 'create-player hide';
     return (
       <div>
-        <div className="g-2-3" />
+        <div className="g-2-3 light-purple">&nbsp;</div>
         <a href="" onClick={this.handleClick} className="g-1-3 dark-purple">New</a>
         <div className={classes}>
           <CreatePlayer onCreate={this.handleCreate}/>
