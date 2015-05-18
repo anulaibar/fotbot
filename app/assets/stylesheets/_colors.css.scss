@@ -1,4 +1,3 @@
-// Background colors and text colors
 @mixin stripe ($color) {
   a:nth-child(even) {
     background-color: lighten($color, 5%);
@@ -7,31 +6,31 @@
 .dark-black {
   background-color: Black;
   color: White;
+  a {
+    color: White;
+    &:visited {
+      color: White;
+    }
+  }
 }
 .black {
+  @extend .dark-black;
   background-color: lighten(Black, 5%);
-  color: White;
 }
 .light-black {
+  @extend .dark-black;
   background-color: lighten(Black, 10%);
-  color: White;
 }
-.pink {
-  background-color: HotPink;
-  color: White;
-}
-.purple {
-  @include stripe(Purple);
-  background-color: Purple;
-  color: White;
-}
-.dark-purple {
-  background-color: darken(Purple, 5%);
-  color: White;
-}
-.light-purple {
-  background-color: lighten(Purple, 5%);
-  color: White;
+.gray {
+  @include stripe(LightGray);
+  background-color: LightGray;
+  color: Black;
+  a {
+    color: lighten(Black, 20%);
+    &:visited {
+      color: lighten(Black, 20%);
+    }
+  }
 }
 .white {
   background-color: White;
@@ -44,22 +43,4 @@
 .red {
   background-color: Red;
   color: White;
-}
-.brown {
-  background-color: Brown;
-  color: White;
-}
-.orange {
-  background-color: Orange;
-  color: White;
-}
-.blue {
-  background-color: Blue;
-  color: White;
-}
-a {
-  color: White;
-  &:visited {
-    color: White;
-  }
 }

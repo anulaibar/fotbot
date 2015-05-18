@@ -25,7 +25,7 @@ var Players = React.createClass({
     return (
       <div>
         <NewPlayer onCreate={this.handleCreate}/>
-        <div className="purple">
+        <div className="gray">
           {this.state.players.map(function(player) {
             return(
               <Link to="showPlayer" params={player} key={player.id} className="g-1">
