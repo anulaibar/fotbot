@@ -6,7 +6,7 @@ var ShowTeam = React.createClass({
 
   getInitialState: function() {
     return {
-      team: {name: null, avatar: null}
+      team: {name: null, color: null}
     };
   },
   contextTypes: {
@@ -45,7 +45,7 @@ var ShowTeam = React.createClass({
         <div className="g-2-3">&nbsp;</div>
         <Link to="teams" className="g-1-3 light-black">Back</Link>
         <div className={"g-1 " + this.state.team.color}>
-          {this.state.team.color}
+          {this.state.team.color || ''}
         </div>
         <button className="g-1 red" onClick={this.handleClick}>
           Delete

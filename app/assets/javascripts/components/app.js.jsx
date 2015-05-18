@@ -14,7 +14,7 @@ var App = React.createClass({
           <RouteHandler/>
         </div>
         <div className="footer black">
-          Robots lovingly delivered by <a href="http://robohash.org">Robohash.org</a>
+          Robots by <a href="http://robohash.org">Robohash.org</a>
         </div>
       </div>
     );
