@@ -4,8 +4,16 @@
     background-color: lighten($color, 5%);
   }
 }
-.black {
+.dark-black {
   background-color: Black;
+  color: White;
+}
+.black {
+  background-color: lighten(Black, 5%);
+  color: White;
+}
+.light-black {
+  background-color: lighten(Black, 10%);
   color: White;
 }
 .pink {
