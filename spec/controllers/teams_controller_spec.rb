@@ -11,7 +11,7 @@ RSpec.describe TeamsController, type: :controller do
       expect(Team).to receive(:all).and_return(teams)
       get :index
     end
-    xit 'returns all teams' do
+    it 'returns all teams' do
       json = JSON.parse(response.body)
       expect(json.count).to eq(teams.count)
     end
@@ -43,14 +43,15 @@ RSpec.describe TeamsController, type: :controller do
   end
   describe 'POST /create' do
     context 'with valid params' do
-      let(:team) { double() }
       let(:params) { {team: {name: 'R2D2', color: 'White'}} }
       it 'returns ok' do
+        team = Team.new(id: 1, name: 'C3PO', color: 'Gold')
         expect(Team).to receive(:new) { team }
         expect(team).to receive(:valid?) { true }
         expect(team).to receive(:save)
         post :create, params
         expect(response.status).to eq(200)
+        expect(response.body).to eq(team.to_json)
       end
     end
     context 'with invalid params' do
@@ -74,7 +75,7 @@ RSpec.describe TeamsController, type: :controller do
     end
     context 'with invalid params' do
       let(:team) { Team.new(id: 1, name: 'C3PO', color: 'Gold') }
-      let(:params) { {id: 1, team: {name: nil}} }
+      let(:params) { {id: 1, team: {color: nil}} }
       it 'returns bad request' do
         expect(Team).to receive(:find_by_id) { team }
         patch :update, params

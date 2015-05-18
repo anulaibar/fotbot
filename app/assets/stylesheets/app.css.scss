@@ -59,7 +59,7 @@ input, button {
   font-size: 0;
   height: 300px;
 }
-.create-player {
+.create-player, .create-team {
   @include transition(height);
   height: 1.4em;
   overflow: hidden;

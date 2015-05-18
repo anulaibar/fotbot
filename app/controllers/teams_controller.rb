@@ -19,7 +19,7 @@ class TeamsController < ApplicationController
     team = Team.new(team_params)
     if(team.valid?)
       team.save
-      render json: {}
+      render json: team
     else
       render json: {errors: team.errors.full_messages}, status: 400
     end

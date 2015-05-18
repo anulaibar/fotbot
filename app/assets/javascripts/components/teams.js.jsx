@@ -7,6 +7,11 @@ var Teams = React.createClass({
       teams: []
     };
   },
+  handleCreate: function(team) {
+    var teams = this.state.teams;
+    teams.unshift(team);
+    this.setState({teams: teams});
+  },
   componentDidMount: function() {
     $.get('teams', function(teams) {
       if (this.isMounted()) {
@@ -19,17 +24,17 @@ var Teams = React.createClass({
   render: function() {
     return (
       <div>
-        <div className="g-2-3" />
-        <Link to="newTeam" className="g-1-3 orange">New</Link>
-        {this.state.teams.map(function(team) {
-          return(
-            <div key={team.id} className={"g-1 " + team.color}>
-              {team.name}
-            </div>
-            );
-        })}
+        <NewTeam onCreate={this.handleCreate}/>
+        <div>
+          {this.state.teams.map(function(team) {
+            return(
+              <Link to="showTeam" params={team} key={team.id} className={"g-1 " + team.color}>
+                {team.color}
+              </Link>
+              );
+          })}
+        </div>
       </div>
     );
   }
 });
-

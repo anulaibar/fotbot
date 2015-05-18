@@ -1,32 +1,27 @@
-var Router = ReactRouter;
-
 var NewTeam = React.createClass({
-  mixins: [Router.Navigation],
-
-  handleSubmit: function(e) {
+  getInitialState: function() {
+    return { showForm: false };
+  },
+  handleClick: function(e) {
     e.preventDefault();
-    var name = React.findDOMNode(this.refs.name).value.trim();
-    var data = {team: {name: name}}
-
-    $.ajax({
-      url: 'teams',
-      dataType: 'json',
-      type: 'POST',
-      data: data,
-      success: function(data) {
-        this.transitionTo('teams');
-      }.bind(this),
-      error: function(xhr) {
-        console.error(xhr.responseJSON.errors.toString());
-      }.bind(this)
-    });
+    this.setState({showForm: !this.state.showForm})
+  },
+  handleCreate: function(team) {
+    this.setState({showForm: false});
+    // Pass the newly created team on up to the teams component
+    // so that it can be added to the teams list
+    this.props.onCreate(team);
   },
   render: function() {
+    var classes = this.state.showForm ? 'create-team' : 'create-team hide';
     return (
-      <form onSubmit={this.handleSubmit}>
-        <input className="g-1-2" ref="name" placeholder="Enter name"/>
-        <button className="g-1-2 green">Create</button>
-      </form>
+      <div>
+        <div className="g-2-3">&nbsp;</div>
+        <a href="" onClick={this.handleClick} className="g-1-3 light-black">New</a>
+        <div className={classes}>
+          <CreateTeam onCreate={this.handleCreate}/>
+        </div>
+      </div>
     );
   }
 });
