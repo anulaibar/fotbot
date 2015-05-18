@@ -26,6 +26,7 @@ var CreatePlayer = React.createClass({
       .always(function() {
         this.setState({creating: false});
         input.value = '';
+        input.blur();
       })
     }
   },
