@@ -15,6 +15,6 @@
 //= require turbolinks
 //= require react
 //= require react_ujs
-//= require react_router
+//= require react-router/0.13.3/ReactRouter.min
 //= require components
 //= require_tree .
