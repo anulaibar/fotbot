@@ -33,9 +33,9 @@ var CreateTeam = React.createClass({
   render: function() {
     var buttonText = this.state.creating ? 'Creating...' : 'Create';
     return (
-      <form onSubmit={this.handleSubmit}>
-        <input className="g-2-3" ref="color" placeholder="Enter color"/>
-        <button className="g-1-3 green">{buttonText}</button>
+      <form onSubmit={this.handleSubmit} className="pure-g">
+        <input className="pure-u-2-3" ref="color" placeholder="Enter color"/>
+        <button className="pure-u-1-3 green">{buttonText}</button>
       </form>
     );
   }

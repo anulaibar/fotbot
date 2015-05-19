@@ -4,9 +4,9 @@ var Link = Router.Link;
 var Home = React.createClass({
   render: function() {
     return (
-      <div>
-        <Link to="players" className="g-1-2 light-black">Players</Link>
-        <Link to="teams" className="g-1-2 light-black">Teams</Link>
+      <div className="pure-g">
+        <Link to="players" className="pure-u-1-2 light-black">Players</Link>
+        <Link to="teams" className="pure-u-1-2 light-black">Teams</Link>
       </div>
     );
   }

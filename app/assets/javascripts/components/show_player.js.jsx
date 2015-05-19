@@ -41,16 +41,16 @@ var ShowPlayer = React.createClass({
   },
   render: function() {
     return (
-      <div>
-        <div className="g-2-3">&nbsp;</div>
-        <Link to="players" className="g-1-3 light-black">Back</Link>
-        <div className="avatar g-1">
+      <div className="pure-g">
+        <div className="pure-u-2-3">&nbsp;</div>
+        <Link to="players" className="pure-u-1-3 light-black">Back</Link>
+        <div className="avatar pure-u-1">
           <img src={this.state.player.avatar}/>
         </div>
-        <div className="g-1 light-black">
+        <div className="pure-u-1 light-black">
           {this.state.player.name}
         </div>
-        <button className="g-1 red" onClick={this.handleClick}>
+        <button className="pure-u-1 red" onClick={this.handleClick}>
           Delete
         </button>
       </div>

@@ -25,10 +25,10 @@ var Teams = React.createClass({
     return (
       <div>
         <NewTeam onCreate={this.handleCreate}/>
-        <div>
+        <div className="pure-g">
           {this.state.teams.map(function(team) {
             return(
-              <Link to="showTeam" params={team} key={team.id} className={"g-1 " + team.color}>
+              <Link to="showTeam" params={team} key={team.id} className={"pure-u-1 " + team.color}>
                 {team.color}
               </Link>
               );

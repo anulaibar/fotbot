@@ -41,13 +41,13 @@ var ShowTeam = React.createClass({
   },
   render: function() {
     return (
-      <div>
-        <div className="g-2-3">&nbsp;</div>
-        <Link to="teams" className="g-1-3 light-black">Back</Link>
-        <div className={"g-1 " + this.state.team.color}>
+      <div className="pure-g">
+        <div className="pure-u-2-3">&nbsp;</div>
+        <Link to="teams" className="pure-u-1-3 light-black">Back</Link>
+        <div className={"pure-u-2-3 " + this.state.team.color}>
           {this.state.team.color || ''}
         </div>
-        <button className="g-1 red" onClick={this.handleClick}>
+        <button className="pure-u-1-3 red" onClick={this.handleClick}>
           Delete
         </button>
       </div>
