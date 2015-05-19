@@ -44,9 +44,7 @@ var ShowTeam = React.createClass({
       <div className="pure-g">
         <div className="pure-u-2-3">&nbsp;</div>
         <Link to="teams" className="pure-u-1-3 light-black">Back</Link>
-        <div className={"pure-u-2-3 " + this.state.team.color}>
-          {this.state.team.color || ''}
-        </div>
+        <div className={"pure-u-2-3 team " + this.state.team.color}/>
         <button className="pure-u-1-3 red" onClick={this.handleClick}>
           Delete
         </button>
