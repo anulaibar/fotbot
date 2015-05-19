@@ -27,6 +27,7 @@
 
 * Complete team creation
 * Add team up functionality
+* Fix browser back navigation (remove react-router-rails..)
 * Add js specs
 
 ## Demo
