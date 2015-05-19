@@ -34,7 +34,22 @@ var CreateTeam = React.createClass({
     var buttonText = this.state.creating ? 'Creating...' : 'Create';
     return (
       <form onSubmit={this.handleSubmit} className="pure-g">
-        <input className="pure-u-2-3" ref="color" placeholder="Enter color"/>
+        <div className="pure-u-2-3">
+          <div className="pure-g">
+            <div className="pure-u-1-5 palette black" onClick={this.handlePaletteClick}/>
+            <div className="pure-u-1-5 palette gray"/>
+            <div className="pure-u-1-5 palette white"/>
+            <div className="pure-u-1-5 palette green"/>
+            <div className="pure-u-1-5 palette red"/>
+          </div>
+          <div className="pure-g">
+            <div className="pure-u-1-5 palette blue"/>
+            <div className="pure-u-1-5 palette orange"/>
+            <div className="pure-u-1-5 palette yellow"/>
+            <div className="pure-u-1-5 palette purple"/>
+            <div className="pure-u-1-5 palette pink"/>
+          </div>
+        </div>
         <button className="pure-u-1-3 green">{buttonText}</button>
       </form>
     );

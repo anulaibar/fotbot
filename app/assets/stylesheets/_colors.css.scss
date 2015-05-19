@@ -32,9 +32,14 @@
     }
   }
 }
+// Color palettes
 .white {
   background-color: White;
   color: Black;
+}
+.gray {
+  background-color: Gray;
+  color: White;
 }
 .green {
   background-color: Green;
@@ -44,11 +49,23 @@
   background-color: Red;
   color: White;
 }
+.blue{
+  background-color: Blue;
+  color: White;
+}
+.orange {
+  background-color: Orange;
+  color: White;
+}
+.yellow {
+  background-color: Yellow;
+  color: White;
+}
 .purple {
   background-color: Purple;
   color: White;
 }
-.brown{
-  background-color: Brown;
+.pink{
+  background-color: HotPink;
   color: White;
 }

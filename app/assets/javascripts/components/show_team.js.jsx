@@ -54,4 +54,3 @@ var ShowTeam = React.createClass({
     );
   }
 });
-
