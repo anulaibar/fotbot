@@ -47,7 +47,7 @@ var ShowPlayer = React.createClass({
         <div className="avatar pure-u-1">
           <img src={this.state.player.avatar}/>
         </div>
-        <div className="pure-u-1 light-black">
+        <div className="pure-u-1 light-black player">
           {this.state.player.name}
         </div>
         <button className="pure-u-1 red" onClick={this.handleClick}>
