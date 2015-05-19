@@ -23,6 +23,12 @@
 
     bundle exec rspec
 
+## Todo
+
+* Complete team creation
+* Add team up functionality
+* Add js specs
+
 ## Demo
 
 [Try it!](http://fotbot.herokuapp.com)
