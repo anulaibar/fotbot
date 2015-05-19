@@ -21,6 +21,9 @@
   @extend .dark-black;
   background-color: lighten(Black, 10%);
 }
+body {
+  @extend .black;
+}
 .gray {
   @include stripe(LightGray);
   background-color: LightGray;
